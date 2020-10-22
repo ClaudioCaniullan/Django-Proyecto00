@@ -1,3 +1,6 @@
-comentario 1
+Esta es la capeta de trabajo grupal 
 
-creo que he unido ambos repos
+observaciones
+
+1. se crea este archivo para poner comentarios
+

@@ -1,3 +1,0 @@
-aqui pondre codigo python 
-
-
