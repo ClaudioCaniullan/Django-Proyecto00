@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 Esta es la capeta de trabajo grupal 
 MODIFICADA POR SEBASTIAN GACITUA
 observaciones
 
 1. se crea este archivo para poner comentarios
 
+=======
+experimento 
+>>>>>>> a901b863d9757dd6cd8cab5728b792e37b460212
