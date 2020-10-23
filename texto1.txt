@@ -1,6 +1,1 @@
-Esta es la capeta de trabajo grupal 
-
-observaciones
-
-1. se crea este archivo para poner comentarios
-
+experimento 
