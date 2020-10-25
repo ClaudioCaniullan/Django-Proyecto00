@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#">SALUDhere</a>
+      
 
       <!-- Navigation Bar Hamburger-->
       <button
@@ -35,6 +37,7 @@
       <!-- Navigation Links -->
       <div class="collapse navbar-collapse" id="navigation">
          <ul class="navbar-nav mr-auto">
+          
             <li class="nav-item">
               <a
                 class="nav-link scroll-trigger" 
@@ -46,21 +49,21 @@
               <a 
                 class="nav-link scroll-trigger" 
                 href="#competencias">
-                  Especialidades Médicas
+                  Noticias
               </a>
             </li>
             <li class="nav-item">
               <a 
                 class="nav-link scroll-trigger" 
                 href="#equipo">
-                  Blog
+                  Nuestro Equipo
               </a>
             </li>
             <li class="nav-item">
               <a 
                 class="nav-link scroll-trigger" 
                 href="#enlaces"> 
-                  Enlaces
+                  Información
               </a>
             </li>
             <li class="nav-item">
@@ -86,7 +89,7 @@
                     href="#"
                     data-toggle="modal"
                     data-target="#profile-modal">
-                      Perfil
+                      Usuario
                   </a>
                   <a class="dropdown-item scroll-trigger"
                     data-toggle="modal"
@@ -97,9 +100,51 @@
                   <a class="dropdown-item scroll-trigger" href="">
                       Logout
                   </a>
-              </div>
+
+                  <li class="nav-item">
+                    
+                    <a 
+                    <ul class="nav nav-justified"></ul>
+                    
+                    <div class="login-form form-inline my-2 my-lg-0">
+                      
+                      
+                      <div class="row justify-content-right"></div>
+                      
+                      
+                     <input type="text" class="form-control" placeholder="User Name" id="Nombre">
+                  </div>
+                  <div class="form-group form-inline my-2 my-lg-0"> 
+                     
+                     <input type="password" class="form-control" placeholder="Password" id="Passwordz">
+                  </div>
+                  <div>
+                  <button onclick="EnviarDatos()" type="submit" class="form-group form-inline my-2 my-lg-0 btn btn-success" style="padding-right: 10%; margin-bottom: 20px;">login</button> 
+                  </div>
+                      
+                        
+                        
+                    </div>
+                   </a>
+                  </li>
+
+
+
+              </div>    
+                        
+                 
             </li>
          </ul>
+         <li class="nav-item">
+          <a
+            class="nav-link scroll-trigger" 
+            href="#contacto">
+           
+            
+
+            
+          </a>
+        </li>
          <form class="form-inline my-2 my-lg-0">
            <input class="form-control mr-sm-2" 
               type="text"
@@ -429,6 +474,7 @@
     <!-- END MODAL FORMS -->
 
     <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="js/main.js"></script>
     <script 
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
