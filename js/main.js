@@ -17,3 +17,19 @@ function EnviarDatos() {
             location.reload();
         }
 }
+
+
+function eliminaItem(item) {
+    item.parentNode.removeChild(item);
+}
+function agregarDiagnostico() {
+    let li = document.createElement("li");
+    li.setAttribute('onclick', 'eliminaItem(this);')
+    let casilla = document.getElementById("Diagnosticox");
+    let texto = casilla.value;
+    console.log(texto);
+    li.textContent = texto;
+    document.getElementById("lista").appendChild(li);
+    casilla.value = "";
+
+}
