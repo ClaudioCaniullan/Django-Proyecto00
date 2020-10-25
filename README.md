@@ -2,6 +2,10 @@
 
 Observaciones
 
+A. Respecto de la rama master y su repositorio contiene el proyecto final con todos los archivos operativos y funcionales
+
+B. Respecto del repositorio de la rama test:
+
 1. las ramas con las cuales trabajamos son las siguientes 
 cabecera1 = francisca
 noticias = walter
