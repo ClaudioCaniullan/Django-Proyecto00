@@ -2,7 +2,21 @@
 Awakelab
 Full Stack Python 2020
 */
- 
+ #completo{
+    padding: 1% 3% 14px;
+    min-height: 750px;  
+}
+
+#fondo-blanco{
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 #competencias, 
 #contacto {
     padding-top: 60px;
@@ -10,9 +24,10 @@ Full Stack Python 2020
 }
 
 #principal {
-    padding: 100px 5% 20px;
-    min-height: 700px;
+    padding: 4% 5% 20px;
+    min-height: 1000px;
 }
+
 
 #competencias > div >  h3 {
     color: white;
@@ -29,21 +44,24 @@ Full Stack Python 2020
     min-height: 100%;
 }
 
+.col-md-12{
+    width: 50px;
+}
 .navbar a {
     font-weight: bold;
 }
 
 .navbar-dark {
-    background-color: black;
+    background-color:black;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar, .modal { 
+h1, h3, h4, h5, h6, .navbar, .modal { 
     font-family: 'Poiret One', cursive;
 }
 
 .bg-principal {
-    background-image: url('../img/port.jpg');
-    background-size: cover;
+    background-image: url('https://img.freepik.com/foto-gratis/doctor-estetoscopio-mano-fondo-hospital_34200-156.jpg?size=626&ext=jpg');
+    background-size: 100%;
 }
 
 .jumbotron {
@@ -72,3 +90,16 @@ textarea {
 .footer p {
     display: inline;
 }
+p{
+    font-size: 30px;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
