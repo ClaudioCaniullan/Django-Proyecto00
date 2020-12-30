@@ -46,15 +46,28 @@ USUARIO ADMIN
 * Ver histórico exámenes paciente
 
 TAREAS:
-
-* Estructurar proyecto						--> Walter
-|-- Estructurar proyecto en github en nueva rama (rama_django)
-|-- Estructurar carpetas en función a Django
-* Crear template de admin					--> Claudio
-* Json 								--> Valentina
-* Crear form "Contacto"						--> Seba
-* Crear form "Nuevo Paciente"					--> Seba
-* Crear form "Nuevo diagnóstico-exámen"				--> Miguel
+----------------------------------------------------------------------------------------------------------------
+| Miembro Equipo | ROL       | TAREA 										                                                        |
+----------------------------------------------------------------------------------------------------------------
+| Walter         | Developer | - Estructurar proyecto en github en nueva rama (rama_django)                     |
+|                |           | - Estructurar carpetas en función a Django					                              |
+|                |           | - Trabajo Grupal 3 (?)								                                            |
+----------------------------------------------------------------------------------------------------------------
+| Claudio        | Front-End | NavBar y Footer en común para todos los template                                 |
+|                |           | - NavBar del usuario no tiene Login, pero sí cambio de usuario (vista paciente)  |
+|                |           | - Footer con Links de interés                                 			              |
+----------------------------------------------------------------------------------------------------------------
+| Valentina      | Front-end | - Preparación de archivos .json (usuarios y exámenes) 				                    |
+|                |           | - Actualización de templates                                		                	|
+|                |           | - Visualización de gráficos                                 		                	|
+----------------------------------------------------------------------------------------------------------------
+| Sebastian      | Back-end  | - Creación de formulario "Contactanos" del landing page    		                	|
+|                |           | - Creación de formulario "Nuevo paciente" de la vista admin		                	|
+|                |           | - Validación de datos de entrada                                                 |
+----------------------------------------------------------------------------------------------------------------
+| Miguel         | Back-end  | - Formularios para cada exámen ()                                		            |
+|                |           | - Validación de datos de entrada                                			            |
+----------------------------------------------------------------------------------------------------------------
 
 
 
