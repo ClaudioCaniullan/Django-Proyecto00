@@ -5,11 +5,6 @@ import json
 
 # Create your views here.
 
-def crear_usuario2(request):
-    mensaje = "HOLA MUNDO"
-    data = {'prueba': mensaje}
-    return render(request, 'formularios/crear_usuario.html', context=data)
-
 def crear_usuario(request):
     add_user = CrearUsuario(request.POST or None)
     context = {'form': add_user}
