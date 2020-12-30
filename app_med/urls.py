@@ -1,5 +1,9 @@
 from django.urls import path
 
+app_name = "app_med"
+
+
+
 urlpatterns = [
-    path('hello/', app_ex.hello ),
+    path('/', views.algo),
 ]

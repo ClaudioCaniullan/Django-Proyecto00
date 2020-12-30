@@ -4,6 +4,8 @@ from django import forms
 
 class DiagnosticoExamen(forms.Form):
     """
-    docstring
+    Ingresos de diagnósticos y exámenes
     """
-    pass
+    fecha_ingreso = forms.DateField()
+    examen = forms.CharField()
+    diagnóstico = forms.CharField()
