@@ -5,4 +5,4 @@ class CrearUsuario(forms.Form):
     edad =  forms.IntegerField()
     direccion = forms.CharField()
     tipo_usuario = forms.CharField()
-    fecha_compra = forms.DateField()
+    fecha_creacion = forms.DateField()
