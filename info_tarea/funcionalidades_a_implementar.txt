@@ -1,0 +1,75 @@
+* 10 pacientes
+* quien ingresa los datos no es el paciente, sino un 'ejecutivo'
+* login 1 usuario que puede cambiarse de usuario para ver otra interfaz
+* basarse en el ejercicio con las guitarras para el ingreso de datos al json
+
+
+JSONS:
+* Json con datos personales del paciente y diagnósticos
+* Json con exámenes x rut del paciente
+
+FUNCIONALIDADES
+COMÚN:
+* NAVBAR
+-->En la del usuario no aparece el login
+* CONTÁCTANOS
+* FOOTER --> enlaces de interés
+
+
+LANDING PAGE:
+* fOTO PORTADA -->img
+* Noticias --> cards
+* Nuestro equipo --> carrousel
+* Info adicional --> img+links
+* Contactanos --> <FORM>
+
+LOGIN --> form Django (no login de Django)
+* Usuario y pass --> back
+
+USUARIO PACIENTE
+* foto 
+* datos personales --> json
+* resultados exámenes--> json
+* gráficos (Hemograma, perfil lipídico, colesterol, triglicéridos, orina, perfil bioquímico, coagulación )--> json 
+* Diagnósticos --> json
+* [contactanos--todas las páginas]
+
+
+USUARIO ADMIN
+* foto
+* datos personales
+* listado pacientes (datos personales, diagnósticos)--> json
+|_> permite borrar pacientes
+* crear nuevo paciente --> form +  json
+* Ingresar diagnóstico 
+* Ingresar exámenes x us ((Hemograma, perfil lipídico, colesterol, triglicéridos, orina, perfil bioquímico, coagulación )
+* Ver histórico exámenes paciente
+
+TAREAS:
+----------------------------------------------------------------------------------------------------------------
+| Miembro Equipo | ROL       | TAREA 										|
+----------------------------------------------------------------------------------------------------------------
+| Walter         | Developer | - Estructurar proyecto en github en nueva rama (rama_django)                     |
+|                |           | - Estructurar carpetas en función a Django					|
+|                |           | - Trabajo Grupal 3 (?)								|
+----------------------------------------------------------------------------------------------------------------
+| Claudio        | Front-End | NavBar y Footer en común para todos los template                                 |
+|                |           | - NavBar del usuario no tiene Login, pero sí cambio de usuario (vista paciente)  |
+|                |           | - Footer con Links de interés                                 			|
+----------------------------------------------------------------------------------------------------------------
+| Valentina      | Front-end | - Preparación de archivos .json (usuarios y exámenes) 				|
+|                |           | - Actualización de templates                                			|
+|                |           | - Visualización de gráficos                                 			|
+----------------------------------------------------------------------------------------------------------------
+| Sebastian      | Back-end  | - Creación de formulario "Contactanos" del landing page    			|
+|                |           | - Creación de formulario "Nuevo paciente" de la vista admin			|
+|                |           | - Validación de datos de entrada                                                 |
+----------------------------------------------------------------------------------------------------------------
+| Miguel         | Back-end  | - Formularios para cada exámen ()                                		|
+|                |           | - Validación de datos de entrada                                			|
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
