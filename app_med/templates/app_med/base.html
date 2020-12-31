@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Awakelab Full Stack Python</title>
+    <title>SALUDhere</title>
     <meta charset="utf-8">
     <meta name="viewport" 
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
     <!-- Loading Bootstrap CSS -->
     <link 
       rel="stylesheet" 
@@ -13,12 +15,16 @@
       crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" 
         rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
+    
+
+ 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <a class="navbar-brand" href="#">Awakelab</a>
+      <a class="navbar-brand" href="#">SALUDhere</a>
+      
 
       <!-- Navigation Bar Hamburger-->
       <button
@@ -32,45 +38,27 @@
           <span class="navbar-toggler-icon"></span>
       </button>
       <!-- End Navigation Bar Hamburger -->
+
       <!-- Navigation Links -->
       <div class="collapse navbar-collapse" id="navigation">
          <ul class="navbar-nav mr-auto">
+      
+          {% block barra_general %}
+            {% for element in list1 %}
             <li class="nav-item">
               <a
                 class="nav-link scroll-trigger" 
                 href="#principal">
-                  Grupo Python
+                  {{element}}
               </a>
             </li>
-            <li class="nav-item">
-              <a 
-                class="nav-link scroll-trigger" 
-                href="#competencias">
-                  Competencias
-              </a>
-            </li>
-            <li class="nav-item">
-              <a 
-                class="nav-link scroll-trigger" 
-                href="#equipo">
-                  Equipo
-              </a>
-            </li>
-            <li class="nav-item">
-              <a 
-                class="nav-link scroll-trigger" 
-                href="#enlaces"> 
-                  Enlaces
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link scroll-trigger" 
-                href="#contacto">
-                  Contacto
-              </a>
-            </li>
+            {% endfor %}
+          {% endblock %}
+          
+          
+          
             <li class="nav-item dropdown">
+              {% block barra_usuario %}
               <a
                   href="#"
                   class="nav-link dropdown-toggle"
@@ -80,27 +68,58 @@
                   aria-expanded="false">
                       Perfil <span class="caret"></span>
               </a>
+
               <div class="dropdown-menu dropdown-menu-right">
                   <a 
                     class="dropdown-item scroll-trigger"
                     href="#"
                     data-toggle="modal"
                     data-target="#profile-modal">
-                      Perfil
+                      Usuario
                   </a>
+
                   <a class="dropdown-item scroll-trigger"
                     data-toggle="modal"
                     data-target="#settings-modal">
                         Configuración
                   </a>
+
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item scroll-trigger" href="">
                       Logout
                   </a>
+              {% endblock%}
+                
+                {% block login %}
+                <li class="nav-item">
+                <ul class="nav nav-justified">
+                    
+                  <div class="login-form form-inline my-2 my-lg-0">
+                    <div class="row justify-content-right"></div>
+                    <input type="text" class="form-control" placeholder="User Name" id="Nombre">
+                  </div>
+
+                  <div class="form-group form-inline my-2 my-lg-0">
+                    <input type="password" class="form-control" placeholder="Password" id="Passwordz">
+                  </div>
+
+                  <div>
+                  <button onclick="EnviarDatos()" type="submit" class="form-group form-inline my-2 my-lg-0 btn btn-success" style="padding-right: 10%; margin-bottom: 20px;">login</button> 
+                  </div>
+       
+                </ul>
+                </li>
+                {% endblock %}
               </div>
+                
+                  
             </li>
-         </ul>
-         <form class="form-inline my-2 my-lg-0">
+          </ul>  
+
+        </div>    
+          
+        {% block search %}
+        <form class="form-inline my-2 my-lg-0">
            <input class="form-control mr-sm-2" 
               type="text"
               placeholder="Search" 
@@ -109,114 +128,140 @@
                     font-weight-bold text-white my-2 my-sm-0"
                     type="submit">Search</button>
          </form>
+        {% endblock %}
+
       </div>
-      <!-- Navigation Links -->
     </nav>
     <!-- End Navigation Bar -->
 
+
+
     <!-- Section: Principal -->
+    {% block seccion_principal %}
     <div class="container-fluid bg-principal" id="principal">
       <div class="row">
         <div class="col-sm-12">
           <div class="jumbotron jumbotron-main">
-            <h2>Grupo Full Stack Python</h2>
-            <h3>Awakelab</h3>
+            <h2>Tu historial clínico en un sólo lugar</h2>
+            <h3>SALUDhere</h3>
           </div>
         </div>
       </div>
     </div>
+    {% endblock %}
     <!-- End Section: Principal -->
 
+
+
     <!-- Section: Competencias -->
+    {% block competencias %}
     <div class="container-fluid bg-dark" id="competencias">
       <div class="row">
-        <h3>Nuestras Competencias</h3>
+        <h3>Informacion Noticiarias</h3>
       </div>
+
       <div class="row">
+
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <h3 class="card-header">Competencia 1</h3>
+            <h3 class="card-header"> Informacion Covid </h3>
             <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                  grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
+              <h4 class="card-title">Minsal informa 52 fallecidos</h4>
+              <p class="card-text">Laboratorios informaron 37 mil examenes
+                  de PCR, 52 Fallecidos y 1773 Nuevos casos activos</p>
+              <a href="#!" class="btn btn-dark">Ver Noticia</a>
             </div>
           </div>
         </div>
+  
+        
+        <!-- 
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <h3 class="card-header">Competencia 2</h3>
+            <h3 class="card-header">Custodia del Plebicito</h3>
             <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
+              <h4 class="card-title">Custodia Policiales & Militar</h4>
+              <p class="card-text">Mas de 50 mil funcionarios
+                Policiales y Militares Custodiaran Plebicito</p>
+              <a href="#!" class="btn btn-dark">Ver Noticia</a>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <h3 class="card-header">Competencia 3</h3>
+            <h3 class="card-header">Covid en Mall Zofri</h3>
             <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
+              <h4 class="card-title">Caso positivo en Mall Zofri</h4>
+              <p class="card-text">Trabajadora del Mall Zofri,
+               es Positivo para COVID, ahora esta en cuarentena</p>
+              <a href="#!" class="btn btn-dark">Ver Noticia</a>
             </div>
           </div>
         </div>
+        
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <h3 class="card-header">Competencia 4</h3>
+            <h3 class="card-header">Nuevo control Ingreso</h3>
             <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
+              <h4 class="card-title"> Ingreso a la R. de los lagos</h4>
+              <p class="card-text">Evaluan nuevo control de ingreso
+               para el sector de Cocule, que se instala el día de hoy</p>
+              <a href="#!" class="btn btn-dark">Ver Noticia</a>
             </div>
           </div>
         </div>
+      -->
       </div>
+
+
+
+
       <div class="row">
+
         <div class="col-md-4">
           <div class="card">
-            <h3 class="card-header">Competencia 5</h3>
+            <h3 class="card-header">Covid-19 en Arauco</h3>
             <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
+              <h4 class="card-title">Casos en Aumento</h4>
+              <p class="card-text">Uno de cada cinco examenes
+                es covid positivo en Arauco</p>
+              <a href="#!" class="btn btn-dark">Ver Noticia</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <h3 class="card-header">Competencia 6</h3>
+            <h3 class="card-header">Lapiz Pasta</h3>
             <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
+              <h4 class="card-title">Cualquier marca</h4>
+              <p class="card-text">Desde la moneda entregan un  
+                Catalogo, que permite evitar info falsas</p>
+              <a href="#!" class="btn btn-dark">Ver noticias</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <h3 class="card-header">Competencia 7</h3>
+            <h3 class="card-header">Muerte de TENS</h3>
             <div class="card-body">
-              <h4 class="card-title">Subtítitulo competencia</h4>
-              <p class="card-text">Descripción de la competencia del 
-                grupo Full Stack Python de Awakelab.</p>
-              <a href="#!" class="btn btn-dark">Ver mas</a>
+              <h4 class="card-title">Muerte de joven TENS</h4>
+              <p class="card-text">Min. Confirma la muerte de 
+                TENS "No toleraremos la violencia"</p>
+              <a href="#!" class="btn btn-dark">Ver Noticia</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    {% endblock %}
     <!-- End Section: Competencias -->
 
+
+
     <!-- Section: Equipo -->
+    {% block equipo %}
     <div class="container-fluid bg-light" id="equipo">
       <div class="row">
         <h3>Nuestro Equipo</h3>
@@ -228,21 +273,21 @@
             data-interval="3000">
           <div class="carousel-inner" style="padding: 4rem;" role="listbox">
             <div style="height: 400px" class="carousel-item active">
-              <img class="d-block img-fluid carousel-img" src="img/group1.jpg">
+              <img class="d-block img-fluid carousel-img" src="img/adn (1).jpg">
               <div class="carousel-caption">
-                Grupo Front End
+                INFORMACIÓN
               </div>
             </div>
             <div style="height: 400px" class="carousel-item">
-              <img class="d-block img-fluid carousel-img" src="img/group2.jpg">
+              <img class="d-block img-fluid carousel-img" src="img/adn (2).jpg">
               <div class="carousel-caption">
-                Grupo Back End
+                INNOVACIÓN
               </div>
             </div>
             <div style="height: 400px" class="carousel-item">
-              <img class="d-block img-fluid carousel-img" src="img/group3.jpg">
+              <img class="d-block img-fluid carousel-img" src="img/adn (3).jpg">
               <div class="carousel-caption">
-                Grupo DevOps
+                TECNOLOGIA 
               </div>
             </div>
           </div>
@@ -270,44 +315,16 @@
         </div>
       </div>
     </div>
+    {% endblock %}
     <!-- End Section: Equipo -->
 
+
+
     <!-- Section: Enlaces -->
+    {% block enlaces %}
     <div class="container-fluid bg-dark" id="enlaces">
       <div class="row">
-          <h3>Enlaces de Interés</h3>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="media">
-            <img class="d-flex mr-3" src="img/flag-64.png" 
-                alt="Generic placeholder image">
-            <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 1</h5>
-              <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="media">
-            <img class="d-flex mr-3" src="img/world-64.png" 
-                alt="Generic placeholder image">
-            <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 2</h5>
-              <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          <h3>Informacion Addicional</h3>
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -315,72 +332,123 @@
             <img class="d-flex mr-3" src="img/screen-64.png" 
                 alt="Generic placeholder image">
             <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 3</h5>
+              <h5 class="mt-0">Numeros del Hospital</h5>
               <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
+                <li>Informaciones :+56228653467 <a href="#">Ver más</a></li>
+                <li>Farmacia      :+56228645758 <a href="#">Ver más</a></li>
+                <li>Laboratorio   :+56228647521 <a href="#">Ver más</a></li>
+                <li>Urgencias     :+56980457263 <a href="#">Ver más</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="media">
-            <img class="d-flex mr-3" src="img/gear-64.png" 
+            <img class="d-flex mr-3" src="img/corazon.png" 
                 alt="Generic placeholder image">
             <div class="media-body">
-              <h5 class="mt-0">Enlaces Tipo 4</h5>
+              <h5 class="mt-0">Recintos Cercanos</h5>
               <ul>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
-                <li>Enlace de interés del grupo <a href="#">Ver más</a></li>
+                <li>CESFAM S.Ger.   :+56228467356 <a href="#">Ver más</a></li>
+                <li>CESFAM Cardenal :+56228456753 <a href="#">Ver más</a></li>
+                <li>CESFAM Vista H. :+56228476573 <a href="#">Ver más</a></li>
+                <li>SAPU Alejando R.:+56228477543<a href="#">Ver más</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="media">
+            <img class="d-flex mr-3" src="img/info.png" 
+                alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Informacion adicional</h5>
+              <ul>
+                <li>MIN.de Salud     :8001100737 <a href="#">Ver más</a></li>
+                <li>Chile Responde   :8007000462 <a href="#">Ver más</a></li>
+                <li>Responde Salud   :8001242330 <a href="#">Ver más</a></li>
+                <li>Inst medico l.   :8004157432<a href="#">Ver más</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="media">
+            <img class="d-flex mr-3" src="img/info.png" 
+                alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Otras Numeros</h5>
+              <ul>
+                <li>Fonasa          :8000117400 <a href="#">Ver más</a></li>
+                <li>Registro Civil  :8000478411 <a href="#">Ver más</a></li>
+                <li>Carabinero de c.:+562248743 <a href="#">Ver más</a></li>
+                <li>MinPlan         :8000114723 <a href="#">Ver más</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+    {% endblock %}
     <!-- End Section: Enlaces -->
 
+
+
+
     <!-- Section: Contacto -->
+    {% block contacto %}
     <div class="container-fluid bg-light" id="contacto">
       <div class="row">
         <h2>Contáctanos</h2>
       </div>
+
       <div class="row justify-content-center align-items-center h-100">
         <div class="col-sm-6" id="contact-form">
           <form>
+
             <div class="form-group">
               <label for="contact-name">Nombre</label>
               <input type="text" class="form-control" id="contact-name" 
                   placeholder="Tu Nombre">
             </div>
+
             <div class="form-group">
               <label for="contact-email">Email</label>
               <input type="email" class="form-control" id="contact-email" 
                   placeholder="Tu Email">
             </div>
+
             <div class="form-group">
               <label for="contact-msg">Email</label>
               <textarea class="form-control" id="contact-msg" 
                   placeholder="Tu Mensaje" rows="4"></textarea>
             </div>
+
             <div class="btn-group">
               <button type="button" class="btn btn-outline-secondary">Enviar</button>
               <button type="button" class="btn btn-outline-secondary">Limpiar</button>
             </div>
+
           </form>
         </div>
       </div>
     </div>
     <!-- End Section: Contacto -->
+    {% endblock%}
 
+
+    {% block footer%}
     <footer class="footer bg-dark text-center">
       <p class="text-muted">&copy; 2020 Awakelab.</p>
       <p class="text-muted">Grupo Full Stack Python</p>
     </footer>
+    {% endblock %}
+
+
+
+
 
     <!-- MODAL FORMS -->
     <div class="modal" id="profile-modal" role="dialog">
@@ -429,6 +497,7 @@
     <!-- END MODAL FORMS -->
 
     <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="js/main.js"></script>
     <script 
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
