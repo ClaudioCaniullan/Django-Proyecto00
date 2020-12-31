@@ -11,6 +11,11 @@ def validar_fecha(fecha):
         raise ValidationError("Sólo fechas de diciembre 2020")
 
 class CrearUsuario(forms.Form):
+    dni = forms.CharField(widget = forms.TextInput(
+                                attrs = {'style': 'background-color: pink;'}),
+                                    validators=[validators.MinLengthValidator(9, "Ingresar dni en el siguiente formato 77111666-5"), 
+                                        validators.MaxLengthValidator(11, "Ingresar dni en el siguiente formato 77111666-5")])
+
     nombre = forms.CharField(widget = forms.TextInput(
                                 attrs = {'style': 'background-color: green;'}),
                                     validators=[validators.MinLengthValidator(10, "El nombre debe tener minimo 10 caracteres"), 
