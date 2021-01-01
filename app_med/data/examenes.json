@@ -12,7 +12,7 @@
 
 {"rut":"14182400-8",
   "diagnosticos":["Trombosis pierna izquierda"],
-  "hemograma":[{"fecha":"05/12/2020","eritrocito":3.9,"leucocitos":10.03,"hemoglobina":11.2,"hematocrito":32.1, "VCM":85.5,"CHCM":31.9, "plaquetas":499,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
+  "hemograma":[{"fecha":"05/12/2020","eritrocito":3.8,"leucocitos":10.03,"hemoglobina":11.2,"hematocrito":32.1, "VCM":85.5,"CHCM":31.9, "plaquetas":499,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
   "perfil_bioquimico":[],
   "perfil_lipidico":[],
   "orina":[],
