@@ -6,6 +6,5 @@ from django.shortcuts import render
 def mostrar_app_med(request):
     # lista para la cabecera
     list1 = ['Inicio', 'Noticias', 'Nuestro Equipo', 'Informacion', 'Contacto']
-
     datos = {'list1': list1, }
-    return render(request, 'app_med/base.html', context=datos)
+    return render(request, 'app_med/00.html', context=datos)
