@@ -171,7 +171,6 @@ class PerfilLipidico(forms.Form):
                                                         validators.MinLengthValidator(1),
                                                         validators.MaxValueValidator(100), 
                                             ]
-
     )
 
     hdl                 = forms.IntegerField(
@@ -181,7 +180,6 @@ class PerfilLipidico(forms.Form):
                                                         validators.MinLengthValidator(40),
                                                         validators.MaxValueValidator(60), 
                                             ]
-
     )
 
     vldl                = forms.IntegerField(
@@ -191,7 +189,6 @@ class PerfilLipidico(forms.Form):
                                                         validators.MinLengthValidator(2),
                                                         validators.MaxValueValidator(30), 
                                             ] 
-
     )
 
     trigleceridos       = forms.IntegerField(
@@ -200,7 +197,6 @@ class PerfilLipidico(forms.Form):
                                                         validators.MinLengthValidator(1),
                                                         validators.MaxValueValidator(150), 
                                             ]
-
     )
 
     diagnostico         = forms.CharField(
@@ -240,7 +236,6 @@ class Orina(forms.Form):
                                                         validators.MinLengthValidator(1),
                                                         validators.MaxValueValidator(20), 
                                             ]
-
     )
 
     cetonas             = forms.ChoiceField(
