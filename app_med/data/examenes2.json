@@ -1,0 +1,34 @@
+{
+"6789686-8":{
+  "diagnosticos":["Trombosis cerebral","Depresion"],
+  "hemograma":[{"fecha":"12/06/2018","eritrocito":3.4,"leucocitos":12.03,"hemoglobina":10.2,"hematocrito":30.1, "VCM":88.5,"CHCM":33.9, "plaquetas":507,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
+  "perfil_bioquimico":[],
+  "perfil_lipidico":[],
+  "orina":[],
+  "coagulacion":[{"fecha":"14/06/2018","Tiempo_protrombina":16.3,"Porc_Protrombina":54.0, "Observaciones":"Alterado"},
+  {"fecha":"14/06/2019","Tiempo_protrombina":20.4,"Porc_Protrombina":40.0, "Observaciones":"Alterado"}],
+  "glicemia":[],
+	"electrocardiograma":[]				
+},
+"14182400-8":{
+  "diagnosticos":["Trombosis pierna izquierda"],
+  "hemograma":[{"fecha":"05/12/2020","eritrocito":3.9,"leucocitos":10.03,"hemoglobina":11.2,"hematocrito":32.1, "VCM":85.5,"CHCM":31.9, "plaquetas":499,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
+  "perfil_bioquimico":[],
+  "perfil_lipidico":[],
+  "orina":[],
+  "coagulacion":[{"fecha":"05/12/2020","Tiempo_protrombina":20.4,"Porc_Protrombina":40.0,"Observaciones":"Alterado"}],
+  "glicemia":[],
+	"electrocardiograma":[]				
+},
+"6909268-1":{
+  "diagnosticos":["Resistencia a la insulina"],
+  "hemograma":[],
+  "perfil_bioquimico":[],
+  "perfil_lipidico":[{"fecha":"10/04/2019","Colesterol_total":143,"Colesterol_LDL":83,"Colesterol_HDL":45,"Colesterol_VLDL":14,"Triglicéridos":72,"Observaciones":"Parámetros normales"}],
+  				
+  "orina":[],
+  "coagulacion":[],
+  "glicemia":[{"fecha":"19/06/2019","Glicemia_basal":110.0,"Glicemia_120min":180.0,"Observaciones":"Indice alterado"}],
+	"electrocardiograma":[]				
+}
+}
