@@ -73,12 +73,27 @@ class Orina(forms.Form):
 
 class Coagulacion(forms.Form):
     ''' Formulario Coagulacion '''
-    pass
+    fecha_ingreso       = forms.DateField()
+    tiempo_protrombina = forms.IntegerField(MinValueValidator=12, MaxValueValidator=14, required=True)
+    _%_protombina = forms.IntegerField(MinValueValidator=35, MaxValueValidator=45, required=True)
+    diagnostico         = forms.CharField(required=True)
+
 
 class Glicemia(forms.Form):
     ''' Formulario Glicemia '''
-    pass
+    fecha_ingreso       = forms.DateField()
+    glicemia_basal      = forms.IntegerField(MinValueValidator=60, MaxValueValidator=100, required=True)
+    glicemia_120min     = forms.IntegerField(MinValueValidator=60, MaxValueValidator=140, required=True)
+    diagnostico         = forms.CharField(required=True)
+
 
 class Electrocardiograma(forms.Form):
     ''' Formulario Electrocardiograma '''
-    pass
+    fecha_ingreso       = forms.DateField()
+    ritmo               = forms.CharField(required=True)
+    conduccion_AV       = forms.DecimalField(max_digits=1, decimal_places=2, required=True)
+    conduccion_IV       = forms.DecimalField(max_digits=1, decimal_places=2, required=True)
+    frecuencia          = forms.IntegerField(MinValueValidator=10, MaxValueValidator=100, required=True)
+    eje_electrico       = forms.IntegerField(MinValueValidator=10, MaxValueValidator=100, required=True)
+    otros               = forms.IntegerField(MinValueValidator=1, MaxValueValidator=100, required=True)
+    diagnostico         = forms.CharField(required=True)
