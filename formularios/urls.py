@@ -5,7 +5,12 @@ from . import views
 app_name = "formularios"
 
 urlpatterns = [
-    path('tabla_examenes', views.tabla_examenes),
-    path('tabla_creada', views.tabla_creada),
-    path('<id>/borrar', views.eliminar_examen),
+    path('hemograma', views.Hemograma),
+    # path('perfilbioquimico', views.PerfilBioquimico),
+    # path('perfillipidico', views.PerfilLipidico),
+    # path('orina', views.Orina),
+    # path('coagulacion', views.Coagulacion),
+    # path('glicemia', views.Glicemia),
+    # path('electrocardiograma', views.Electrocardiograma),
+
 ]
