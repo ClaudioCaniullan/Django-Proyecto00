@@ -42,3 +42,8 @@ def contacto(request):
 def mensaje_enviado(request):
     return render(request, 'formularios/mensaje_enviado.html')
         
+def ver_comentarios(request):
+    filename= "/formularios/static/formularios/data/mensajes.json"
+    with open(str(settings.BASE_DIR)+filename, 'r') as file:
+            mensaje_contactos=json.load(file)
+    return render(request, 'formularios/ver_comentarios.html', context=mensaje_contactos)

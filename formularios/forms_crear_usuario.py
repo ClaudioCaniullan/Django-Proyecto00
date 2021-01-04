@@ -49,8 +49,8 @@ class Contacto(forms.Form):
 
     mensaje_email = forms.CharField(widget = forms.TextInput(
                 attrs = {'style': 'background-color: yellow;'}),
-                validators=[validators.MinLengthValidator(10, "El nombre debe tener minimo 10 caracteres"), 
-                validators.MaxLengthValidator(30, "El nombre puede tener hasta 30 caracteres")])
+                validators=[ validators.MaxLengthValidator(100, "El nombre puede tener hasta 30 caracteres")])
+                
    
 
 
