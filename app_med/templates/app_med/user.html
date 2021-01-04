@@ -1,3 +1,5 @@
+{% load static%}
+
 <!doctype html>
 <html lang="es">
 
@@ -9,7 +11,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="C:/Users/vary/Desktop/Awakelab/M5-Django/PRUEBA DJANGO/proyecto_web/app_med/static/css/style.css">
+
+  <link rel="stylesheet" href="../proyecto_web/app_med/static/css/style.css">
   <!-- CARGA DE CDN CHART -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
 
@@ -17,90 +20,108 @@
 
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">SALUDhere</a>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Medical Services App.</a>
 
     <!-- Navigation Bar Hamburger-->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false"
-      aria-controls="navigation" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navigation"
+      aria-expanded="false"
+      aria-controls="navigation" 
+      aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
     <!-- End Navigation Bar Hamburger -->
+
     <!-- Navigation Links -->
     <div class="collapse navbar-collapse" id="navigation">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link scroll-trigger" href="#principal">
-            Datos Personales
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link scroll-trigger" href="#competencias">
-            Gráficos SALUDhere
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link scroll-trigger" href="#equipo">
-            Tabla de registros médicos
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">
-            Enlaces de interés <span class="caret"></span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item scroll-trigger" href="https://www.clinicalascondes.cl/HOME">
-              Clinica las condes
+       <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a
+              class="nav-link scroll-trigger" 
+              href="#compromiso">
+                Nuestro compromiso
             </a>
-            <a class="dropdown-item scroll-trigger" href="http://www.hospitalbarrosluco.cl/">
-              Hospital Barros Luco
+          </li>
+          <li class="nav-item">
+            <a 
+              class="nav-link scroll-trigger" 
+              href="#noticias">
+                Noticias
             </a>
-            <a class="dropdown-item scroll-trigger" href="https://www.rescate-help.cl/">
-              Servicio HELP rescate
+          </li>
+          <li class="nav-item">
+            <a 
+              class="nav-link scroll-trigger" 
+              href="#proveedores">
+                Proveedores
             </a>
-            <a class="dropdown-item scroll-trigger" href="https://www.ambulanciassantalucia.cl/">
-              Ambulancia 24 hrs Sta. Lucia
-            </a>
+          </li>
+
+          
+       </ul>
+       <!--LOGIN-->
+       <form class="form-inline">
+          <div class="col-sm-12 col-md-6">
+              <button type="button" class="btn btn-dark btn-sm" style="padding: 1px;"><a class="nav-link userlink" href="login.html">Login</a></button>
           </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success border-dark 
-                    font-weight-bold text-white my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+          <div class="col-sm-12 col-md-6">
+              <button type="button" class="btn btn-dark btn-sm" style="padding: 1px;"><a class="nav-link userlink" href="registro.html">Registro</a></button>
+          </div>
+        </form>
+        <!--FIN LOGIN-->
     </div>
     <!-- Navigation Links -->
   </nav>
   <!-- End Navigation Bar -->
+  <!-- End Navigation Bar -->
+
+<!--body usuario-->
+    <div class="card col-sm-12">
+        <!--información del usuario-->
+        <div class="container">
+            
+            <!--imagen-->
+            <div class="row">
+                <div class="col-sm-3">
+                    <img class="img-fluid" src="{% static "../static/img/users/admin.jpg" %}" alt="Generic placeholder  image", style="border-radius: 60%; width: 60%;">	
+                    
+                </div>
+                <div class="col-sm-3">
+                    <ul>
+                        <li>Nombre: {{nombre_us}}</li>
+                        <li>Edad: {{edad_us}}</li>
+                        <li>Dirección: {{direccion_us}}</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6">
+                    <p style="font-size: xx-large; padding: 9%;">Bienvenid@ {{nombre_us}} !</p>
+                </div>
+                
+            </div>
+        </div> 
+    </div>
 
   <!-- Section: Principal -->
-  <div class="container-fluid bg-principal" id="principal">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="jumbotron jumbotron-main" id="completo">
-          <div class="container col-sm-4" id="fondo-blanco" style="padding: 1%;">
-            <div class="card">
-              <p class="card-text">Foto del paciente</p>
-              <img
-                src="https://static.wikia.nocookie.net/reinoanimalia/images/8/8e/1-chimpanzee-pan-troglodytes-portrait-gerry-ellis.jpg/revision/latest/top-crop/width/360/height/450?cb=20181203100617&path-prefix=es"
-                class="card-img-top" height="375px">
-              <div class="card-body">
-                <h5 class="card-title">Datos Paciente</h5>
-                <p class="card-text">Nombre: Sebastian Gacitua</p>
-                <p class="card-text">Edad: 28 años</p>
-                <p class="card-text">Dirección: Santiago</p>
-                <p class="card-text">Diagnostico: mononucleosis</p>
+    <div class="jumbotron jumbotron-main" id="completo">
+        <div class="row">
+            <h3>LISTADO DE PACIENTES</h3>
 
-                <a href="#" class="btn btn-primary">Ver Diagnostico</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="="row">
+            {% for pac in pacientes %}
+                <p>{{pac}} <a href=""> | Eliminar</a></p> 
+            {% endfor %}
+        </div>
+
+   
     </div>
-  </div>
+  
   <!-- End Section: Principal -->
 
   <!-- Section: CHART -->
