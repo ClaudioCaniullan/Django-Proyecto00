@@ -8,6 +8,7 @@
 <body>
     <h2>Usuario creado con éxito</h2>
     <h4><a href="{% url 'formularios:crear_usuario' %}">Crear otro Usuario</a></h4>
+    <h4><a href="{% url 'app_med:inicio' %}">Volver al Inicio</a></h4>
     {% block content %}
     <p>{{mensaje}}</p>
     {% endblock content %}
