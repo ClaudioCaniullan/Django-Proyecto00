@@ -6,8 +6,8 @@
   <title>Document</title>
 </head>
 <body>
-  {% block content %}
-    {{mensaje_contactos}}
-  {% endblock content%}
+  {% for cont in contacto %}
+   <li> {{cont}} </li>
+  {% endfor %}
 </body>
 </html>
