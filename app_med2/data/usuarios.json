@@ -1,5 +1,6 @@
 {
 "6789686-8":{
+    "rut":"6789686-8",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -10,6 +11,7 @@
   },
 
 "14182400-8":{
+    "rut":"14182400-8",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -20,6 +22,7 @@
   },
 
 "6909268-1":{
+    "rut":"6909268-1",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -30,6 +33,7 @@
   },
 
 "6119262-6":{
+    "rut":"6119262-6",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -40,6 +44,7 @@
   },
 
 "16626598-3":{
+    "rut":"16626598-3",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -50,6 +55,7 @@
   },
 
 "154260691-7":{
+    "rut":"154260691-7",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -60,6 +66,7 @@
   },
 
 "12701512-3":{
+    "rut":"12701512-3",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -70,6 +77,7 @@
   },
 
 "13057272-2":{
+    "rut":"13057272-2",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -80,6 +88,7 @@
   },
 
 "9009648-5":{
+    "rut":"9009648-5",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -90,6 +99,7 @@
   },
 
 "17985729-3":{
+    "rut":"17985729-3",
     "tipo_usuario": "paciente",
     "pass":1234,
     "foto_src":"",
@@ -100,6 +110,7 @@
   },
 
 "9999999-9":{
+    "rut":"9999999-9",
     "tipo_usuario": "admin",
     "pass":4321,
     "foto_src":"",
