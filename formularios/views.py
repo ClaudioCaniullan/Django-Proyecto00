@@ -4,6 +4,14 @@ from django.conf import settings
 import json
 # Create your views here.
 
+# esto no funciona
+def formularioOK(request):
+    filename= "/formularios/static/formularios/data/examenes.json"
+    with open(str(settings.BASE_DIR)+filename, "r") as file:
+        examenes=json.load(file)
+    return render(request, 'formularios/formularioOK.html', context=examenes)
+
+
 
 def hemograma(request):
     formulario = Hemograma(request.POST or None)
@@ -14,7 +22,12 @@ def hemograma(request):
         ruta_examenes = "/formularios/static/formularios/data/examenes.json"
         with open(str(settings.BASE_DIR)+ruta_examenes, 'r') as file:
             examenes = json.load(file)
-            
+        for examen in examenes:
+            if examen == check_rut:
+                examenes['rut']['hemograma'].append(form_data)
+                with open(str(settings.BASE_DIR)+ruta_examenes, 'w') as file:
+                     json.dump(examenes, file)            
+        return redirect('formularios:formularioOK')
     return render(request, 'formularios/hemograma.html', context)
 
 

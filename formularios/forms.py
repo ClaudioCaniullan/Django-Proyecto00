@@ -64,7 +64,7 @@ class Hemograma(forms.Form):
                                             required=True
     )
 
-    diagnostico         = forms.CharField(
+    observaciones       = forms.CharField(
                                             required=True
     )
 
@@ -154,7 +154,7 @@ class PerfilBioquimico(forms.Form):
                                             required=True
     )
 
-    diagnostico         = forms.CharField(
+    observaciones       = forms.CharField(
                                             required=True
     )
 
@@ -207,7 +207,7 @@ class PerfilLipidico(forms.Form):
                                             ]
     )
 
-    diagnostico         = forms.CharField(
+    observaciones       = forms.CharField(
                                             required=True
     )
 
@@ -265,7 +265,7 @@ class Orina(forms.Form):
                                             required=True
     )
 
-    diagnostico         = forms.CharField(
+    observaciones       = forms.CharField(
                                             required=True
     )
 
@@ -293,7 +293,7 @@ class Coagulacion(forms.Form):
 
     )
 
-    diagnostico         = forms.CharField(
+    observaciones       = forms.CharField(
                                             required=True
     )
 
@@ -321,7 +321,7 @@ class Glicemia(forms.Form):
 
     )
 
-    diagnostico         = forms.CharField(
+    observaciones       = forms.CharField(
                                             required=True
     )
 
@@ -374,6 +374,6 @@ class Electrocardiograma(forms.Form):
 
     )
 
-    diagnostico         = forms.CharField(
+    observaciones       = forms.CharField(
                                             required=True
     )
