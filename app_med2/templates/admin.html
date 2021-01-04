@@ -205,9 +205,18 @@
           <h3>Crear nuevo registro de Paciente</h3>
         </div>
         <!-- FORM CREAR PACIENTE-->
+        <div class="col-sm-12">
+          <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{form_pac.as_table}}
+            </table>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
       </div>
     <!-------------- FIN CREACIÓN DE NUEVOS PACIENTES  -------------->
-
+    
 
     <!-- FIN BODY PERFIL USUARIO -->
 

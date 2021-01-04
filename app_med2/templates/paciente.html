@@ -119,7 +119,17 @@
     
     <br>
     <br>
-    
+    <!-- Combobox para cambiar la vista de cada usuario-->
+    <div class="row">
+        <div class="col-sm-9"></div><div class="col-sm-3">
+            {% for r in rut_pacs %}
+                <option value="{{r.id}}">
+                   <!-- </option>>{% if org == current_org %}selected="selected"{% endif %}> -->
+                    {{r.name|capfirst}}
+                </option>
+         {% endfor %}
+        </div>
+    </div>
     
     <!-- BODY PERFIL USUARIO -->
     <div class="card col-sm-12">
@@ -146,10 +156,6 @@
     </div>
 
 
-
-    <div class="container">
-        
-    </div>
 
     <!-- FIN BODY PERFIL USUARIO -->
 
