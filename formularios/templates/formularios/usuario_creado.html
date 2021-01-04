@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <html lang="es">
+        <head>
+          <title>SALUDhere</title>
+          <meta charset="utf-8">
+          <meta name="viewport" 
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <!-- Loading Bootstrap CSS -->
+          <link 
+            rel="stylesheet" 
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+            crossorigin="anonymous">
+          <link href="https://fonts.googleapis.com/css?family=Poiret+One" 
+              rel="stylesheet" type="text/css">
+          <link rel="stylesheet" href="css/style.css">
+        </head>
 <body>
-    <h2>Usuario creado con éxito</h2>
-    <h4><a href="{% url 'formularios:crear_usuario' %}">Crear otro Usuario</a></h4>
-    <h4><a href="{% url 'app_med:inicio' %}">Volver al Inicio</a></h4>
-    {% block content %}
-    <p>{{mensaje}}</p>
-    {% endblock content %}
+    <div>
+        <h2>Usuario creado con éxito</h2>
+        <h4><a href="{% url 'formularios:crear_usuario' %}">Crear otro Usuario</a></h4>
+        <h4><a href="{% url 'app_med:inicio' %}">Volver al Inicio</a></h4>
+    </div>
 </body>
 </html>

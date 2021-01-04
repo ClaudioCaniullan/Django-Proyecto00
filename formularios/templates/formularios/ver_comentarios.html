@@ -7,7 +7,12 @@
 </head>
 <body>
   {% for cont in contacto %}
-   <li> {{cont}} </li>
+  <div>
+    <p><li> Nombre:  {{cont.nombre}} </li></p> <br>
+    <p><li> Email Contacto:  {{cont.email}} </li></p> <br>
+    <p><li> Commentario: {{cont.mensaje_email}} </li></p> <br>
+    <p> ========================================== </p>
+  </div>
   {% endfor %}
 </body>
 </html>
