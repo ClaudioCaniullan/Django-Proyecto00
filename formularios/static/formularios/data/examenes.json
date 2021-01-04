@@ -1,7 +1,7 @@
-[
-{"rut":"6789686-8",
+{
+"6789686-8":{
   "diagnosticos":["Trombosis cerebral"],
-  "hemograma":[{"fecha":"12/06/2018","eritrocito":3.4,"leucocitos":12.03,"hemoglobina":10.2,"hematocrito":30.1, "VCM":88.5,"CHCM":33.9, "plaquetas":507,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
+  "hemograma":[{"fecha":"12/06/2018","eritrocito":3.4,"leucocitos":12.03,"hemoglobina":10.9,"hematocrito":30.1, "VCM":88.5,"CHCM":33.9, "plaquetas":507,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
   "perfil_bioquimico":[],
   "perfil_lipidico":[],
   "orina":[],
@@ -10,9 +10,9 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"14182400-8",
+"14182400-8":{
   "diagnosticos":["Trombosis pierna izquierda"],
-  "hemograma":[{"fecha":"05/12/2020","eritrocito":3.8,"leucocitos":10.03,"hemoglobina":11.2,"hematocrito":32.1, "VCM":85.5,"CHCM":31.9, "plaquetas":499,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
+  "hemograma":[{"fecha":"05/12/2020","eritrocito":3.9,"leucocitos":10.03,"hemoglobina":11.2,"hematocrito":32.1, "VCM":85.5,"CHCM":31.9, "plaquetas":499,"Observaciones":"Recuento de plaquetas alto, riesgo de trombofilia"}],
   "perfil_bioquimico":[],
   "perfil_lipidico":[],
   "orina":[],
@@ -21,7 +21,7 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"6909268-1",
+"6909268-1":{
   "diagnosticos":["Resistencia a la insulina"],
   "hemograma":[],
   "perfil_bioquimico":[],
@@ -33,7 +33,7 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"6119262-6",
+"6119262-6":{
   "diagnosticos":["Resistencia a la insulina"],
   "hemograma":[],
   "perfil_bioquimico":[],
@@ -44,7 +44,7 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"16626598-3",
+"16626598-3":{
   "diagnosticos":["Resistencia a la insulina"],
   "hemograma":[{"fecha":"09/03/2017","eritrocito":4.57,"leucocitos":11.4,"hemoglobina":13.0,"hematocrito":40.0, "VCM":87.5,"CHCM":32.5, "plaquetas":334.0,"Observaciones":"Parámetros normales"}],
   "perfil_bioquimico":[],
@@ -55,7 +55,7 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"154260691-7",
+"154260691-7":{
   "diagnosticos":["Arritmia sinusal"],
   "hemograma":[],
   "perfil_bioquimico":[],
@@ -66,7 +66,7 @@
 	"electrocardiograma":[{"fecha":"03/03/2018","Ritmo":"Sinusal","Conduccion_AV":0.13,"Conduccion_IV":0.09,"Frecuencia":"50x-70x","Eje_electrico":80,"Otros":"QTC 0,40''","Observaciones":"Arritmia sinusal. Alteraciones de repolarizacion precoz inespecificas"}]				
 },
 
-{"rut":"12701512-3",
+"12701512-3":{
   "diagnosticos":[],
   "hemograma":[{"fecha":"09/07/2007","eritrocito":4.57,"leucocitos":11.4,"hemoglobina":13.0,"hematocrito":40.0, "VCM":87.5,"CHCM":32.5, "plaquetas":334,"Observaciones":"Parámetros normales"}],
   "perfil_bioquimico":[],
@@ -77,7 +77,7 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"13057272-2",
+"13057272-2":{
   "diagnosticos":[],
   "hemograma":[],
   "perfil_bioquimico":[{"fecha":"10/11/2020","Glucosa":98.0,"Nitrogeno_ureico":14.3,"Calcio":10.0,"Fosforo":3.6,"Proteinas_totales":8.1,"Albumina":4.5,"Colesterol_Total":143.0,"Acido_urico":4.8,"Fosfatasas_alcalinas":57.0,"Bilirrubina_total":0.65,"LDH":194.0,"GOT/AST":26.0,"Creatinina":0.81,"Observaciones":"Parámetros normales"}],
@@ -88,7 +88,7 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"9009648-5",
+"9009648-5":{
   "diagnosticos":[],
   "hemograma":[{"fecha":"12/09/2009","eritrocito":4.8,"leucocitos":5.5,"hemoglobina":14.3,"hematocrito":42.4, "VCM":88.5,"CHCM":33.7, "plaquetas":258.0,"Observaciones":"Parámetros normales"}],
   "perfil_bioquimico":[{"fecha":"12/09/2009","Glucosa":85.0,"Nitrogeno_ureico":15.0,"Calcio":9.1,"Fosforo":3.7,"Proteinas_totales":7.6,"Albumina":3.5,"Colesterol_Total":186.0,"Acido_urico":4.6,"Fosfatasas_alcalinas":114.0,"Bilirrubina_total":0.3,"LDH":168.0,"GOT/AST":16.0,"Creatinina":0.79
@@ -100,7 +100,7 @@
 	"electrocardiograma":[]				
 },
 
-{"rut":"17985729-3",
+"17985729-3":{
   "diagnosticos":[],
   "hemograma":[{"fecha":"13/10/2020","eritrocito":4.41,"leucocitos":11.9,"hemoglobina":13.4,"hematocrito":40.1, "VCM":90.8,"CHCM":33.5, "plaquetas":337.0,"Observaciones":"Parámetros normales"}],
   "perfil_bioquimico":[],
@@ -110,4 +110,4 @@
   "glicemia":[],
 	"electrocardiograma":[]				
 }
-]
+}

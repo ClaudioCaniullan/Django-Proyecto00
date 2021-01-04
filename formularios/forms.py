@@ -1,7 +1,10 @@
 from django import forms
 from django.core import validators
 from django.core.exceptions import ValidationError
+from localflavor.cl.forms import CLRutField
 
+# class ClienteForm(forms.Form):
+#      dni = ESIdentityCardNumberField(only_nif=True)
 
 
     # list_exam = (
@@ -15,7 +18,8 @@ from django.core.exceptions import ValidationError
 class Hemograma(forms.Form):
     ''' Formulario Hemograma '''
 
-    fecha_ingreso = forms.DateField()
+    rut                 = CLRutField()
+    fecha_ingreso       = forms.DateField()
     eritrocito          = forms.DecimalField(
                                             max_digits=3,
                                             decimal_places=1,
@@ -67,6 +71,8 @@ class Hemograma(forms.Form):
 
 class PerfilBioquimico(forms.Form):
     ''' Formulario Perfil Bioquimico '''
+
+    rut                 = CLRutField()
     fecha_ingreso       = forms.DateField()
     glucosa             = forms.DecimalField(
                                             max_digits=3, 
@@ -155,6 +161,8 @@ class PerfilBioquimico(forms.Form):
 
 class PerfilLipidico(forms.Form):
     ''' Formulario Perfil Lipidico '''
+
+    rut                 = CLRutField()
     fecha_ingreso       = forms.DateField()
     colesterol_total    = forms.IntegerField(
                                             required=True,
@@ -205,11 +213,14 @@ class PerfilLipidico(forms.Form):
 
 class Orina(forms.Form):
     ''' Formulario Orina'''
+
     estado =    (
                 ('Positivo', 'Positivo'), 
                 ('Negativo', 'Negativo')
                 )
 
+
+    rut                 = CLRutField()
     fecha_ingreso       = forms.DateField(
                                             required=True
     )
@@ -248,8 +259,10 @@ class Orina(forms.Form):
                                             required=True
     )
 
-    bilirrubina         = forms.ChoiceField(
-                                            choices=(estado)
+    bilirrubina         = forms.DecimalField(
+                                            max_digits=1, 
+                                            decimal_places=1, 
+                                            required=True
     )
 
     diagnostico         = forms.CharField(
@@ -258,6 +271,8 @@ class Orina(forms.Form):
 
 class Coagulacion(forms.Form):
     ''' Formulario Coagulacion '''
+
+    rut                 = CLRutField()
     fecha_ingreso       = forms.DateField()
     tiempo_protrombina  = forms.IntegerField(
                                             required=True,
@@ -285,6 +300,8 @@ class Coagulacion(forms.Form):
 
 class Glicemia(forms.Form):
     ''' Formulario Glicemia '''
+
+    rut                 = CLRutField()
     fecha_ingreso       = forms.DateField()
     glicemia_basal      = forms.IntegerField(
                                             required=True,
@@ -311,6 +328,8 @@ class Glicemia(forms.Form):
 
 class Electrocardiograma(forms.Form):
     ''' Formulario Electrocardiograma '''
+
+    rut                 = CLRutField()
     fecha_ingreso       = forms.DateField()
     ritmo               = forms.CharField(
                                             required=True
