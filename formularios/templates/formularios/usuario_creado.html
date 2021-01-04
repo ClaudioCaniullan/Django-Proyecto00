@@ -8,8 +8,8 @@
 <body>
     <h2>Usuario creado con éxito</h2>
     <h4><a href="{% url 'formularios:crear_usuario' %}">Crear otro Usuario</a></h4>
-    {% for usuario in usuarios %}
-    <p>{{usuario}}</p>
-    {% endfor %}
+    {% block content %}
+    <p>{{mensaje}}</p>
+    {% endblock content %}
 </body>
 </html>

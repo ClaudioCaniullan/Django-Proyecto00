@@ -36,3 +36,22 @@ class CrearUsuario(forms.Form):
                                                 validators.MaxLengthValidator(1, "El tipo de usuario puede ser A o U")])
                                                         
     fecha_creacion = forms.DateField(validators=[validar_fecha])
+
+class Contacto(forms.Form):
+    
+    nombre = forms.CharField(widget = forms.TextInput(
+                attrs = {'style': 'background-color: green;'}),
+                validators=[validators.MinLengthValidator(10, "El nombre debe tener minimo 10 caracteres"), 
+                validators.MaxLengthValidator(30, "El nombre puede tener hasta 30 caracteres")])
+
+    email = forms.EmailField(widget = forms.TextInput(
+                attrs = {'style': 'background-color: pink;'}))
+
+    mensaje_email = forms.CharField(widget = forms.TextInput(
+                attrs = {'style': 'background-color: yellow;'}),
+                validators=[validators.MinLengthValidator(10, "El nombre debe tener minimo 10 caracteres"), 
+                validators.MaxLengthValidator(30, "El nombre puede tener hasta 30 caracteres")])
+   
+
+
+    
