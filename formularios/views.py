@@ -24,7 +24,7 @@ def hemograma(request):
             examenes = json.load(file)
         for examen in examenes:
             if examen == check_rut:
-                examenes['rut']['hemograma'].append(form_data)
+                examenes[check_rut]['hemograma'].append(from_data)
                 with open(str(settings.BASE_DIR)+ruta_examenes, 'w') as file:
                      json.dump(examenes, file)            
         return redirect('formularios:formularioOK')
