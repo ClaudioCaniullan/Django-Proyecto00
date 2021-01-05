@@ -262,7 +262,7 @@
                     <table>
                     <td>rut</td><td>fecha</td><td>Colesterol_total</td><td>Colesterol_LDL</td><td>Colesterol_HDL</td><td>Fosforo</td>
                     <td>Colesterol_VLDL</td><td>Observaciones</td>
-                    {% for values in pbio_rut%}   
+                    {% for values in plip_rut%}   
                         <tr>    
                             <td>rut_paciente</td>
                             <td>{{values.fecha}}</td>
@@ -281,32 +281,23 @@
             </div>
 
             <div class="collapse" id="orina">
-                <h4>Orina</h4>
-                {"fecha":"07/07/2007","Color":"Amarillo","Densidad":1.015,"PH":6.5,"Glucosa":86.0,"Cetonas":0.0,"Urobilinogeno":0.0,"Bilirrubina":0.3,"Observaciones":"Parámetros normales"}],
+                <h4>Orina</h4>         
                 <div class="row">
                     <table>
-                    <td>rut</td><td>fecha</td><td>Glucosa</td><td>Nitrogeno_ureico</td><td>Calcio</td><td>Fosforo</td>
-                    <td>Proteinas_totales</td><td>Albumina</td><td>Colesterol_Total</td><td>Acido_urico</td>
-                    <td>Fosfatasas_alcalinas</td><td>Bilirrubina_total</td><td>LDH</td>
-                    <td>Creatinina</td><td>Observaciones</td>
-
-                    {% for values in pbio_rut%}   
+                    <td>rut</td><td>fecha</td><td>Color</td><td>Densidad</td><td>PH</td><td>Glucosa</td><td>Cetonas</td>
+                    <td>Urobilinogeno</td><td>Bilirrubina</td><td>Observaciones</td>
+                    
+                    {% for values in orin_rut%}   
                         <tr>    
                             <td>rut_paciente</td>
                             <td>{{values.fecha}}</td>
+                            <td>{{values.Color}}</td>
+                            <td>{{values.Densidad}}</td>
+                            <td>{{values.PH}}</td>
                             <td>{{values.Glucosa}}</td>
-                            <td>{{values.Nitrogeno_ureico}}</td>
-                            <td>{{values.Calcio}}</td>
-                            <td>{{values.Fosforo}}</td>
-                            <td>{{values.Proteinas_totales}}</td>
-                            <td>{{values.Albumina}}</td>
-                            <td>{{values.Colesterol_Total}}</td>
-                            <td>{{values.Acido_urico}}</td>
-                            <td>{{values.Fosfatasas_alcalinas}}</td>
-                            <td>{{values.Bilirrubina_total}}</td>
-                            <td>{{values.LDH}}</td>
-                            
-                            <td>{{values.Creatinina}}</td>
+                            <td>{{values.Cetonas}}</td>
+                            <td>{{values.Urobilinogeno}}</td>
+                            <td>{{values.Bilirrubina}}</td>
                             <td>{{values.Observaciones}}</td>
                             <td><a href="">Eliminar</a></td>
                         </tr>
@@ -317,14 +308,64 @@
 
             <div class="collapse" id="coagulacion">
                 <h4>Coagulacion</h4>
+                <div class="row">
+                    <table>
+                    <td>rut</td><td>fecha</td><td>Tiempo_protrombina</td><td>Porc_Protrombina</td><td>Observaciones</td>                  
+                    {% for values in coag_rut%}   
+                        <tr>    
+                            <td>rut_paciente</td>
+                            <td>{{values.fecha}}</td>
+                            <td>{{values.Tiempo_protrombina}}</td>
+                            <td>{{values.Porc_Protrombina}}</td>
+                            <td>{{values.Observaciones}}</td>
+                            <td><a href="">Eliminar</a></td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
             </div>
 
             <div class="collapse" id="glicemia">
                 <h4>Glicemia</h4>
+                <div class="row">
+                    <table>
+                    <td>rut</td><td>fecha</td><td>Glicemia_basal</td><td>Glicemia_120min</td><td>Observaciones</td>                  
+                    {% for values in glic_rut%}   
+                        <tr>    
+                            <td>rut_paciente</td>
+                            <td>{{values.fecha}}</td>
+                            <td>{{values.Glicemia_basal}}</td>
+                            <td>{{values.Glicemia_120min}}</td>
+                            <td>{{values.Observaciones}}</td>
+                            <td><a href="">Eliminar</a></td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
             </div>
 
             <div class="collapse" id="electrocardiograma">
-                <h4>Electrocardiograma</h4>
+	            <h4>Electrocardiograma</h4>
+                <div class="row">
+                    <table>
+                    <td>rut</td><td>fecha</td><td>Ritmo</td><td>Conduccion_AV</td><td>Conduccion_IV</td>
+                    <td>Frecuencia</td><td>Eje_electrico</td><td>Otros</td><td>Observaciones</td>                   
+                    {% for values in elec_rut%}   
+                        <tr>    
+                            <td>rut_paciente</td>
+                            <td>{{values.fecha}}</td>
+                            <td>{{values.Ritmo}}</td>
+                            <td>{{values.Conduccion_AV}}</td>
+                            <td>{{values.Conduccion_IV}}</td>
+                            <td>{{values.Frecuencia}}</td>
+                            <td>{{values.Eje_electrico}}</td>
+                            <td>{{values.Otros}}</td>
+                            <td>{{values.Observaciones}}</td>
+                            <td><a href="">Eliminar</a></td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
             </div>
 
         </div>
