@@ -2,6 +2,7 @@ from django import forms
 from django.core import validators
 from django.core.exceptions import ValidationError
 import datetime
+import json 
 
 def validar_fecha(fecha):
     fecha_mayor = datetime.datetime.strptime("2020-12-31", "%Y-%m-%d").date()
@@ -50,3 +51,16 @@ class Contacto(forms.Form):
     mensaje_email = forms.CharField(widget = forms.TextInput(
                 attrs = {'style': 'background-color: yellow;'}),
                 validators=[ validators.MaxLengthValidator(100, "El nombre puede tener hasta 30 caracteres")])
+
+class rutPacientes(forms.Form):
+
+     # Generar copia de los datos de usuarios
+    with open('../proyecto_web/app_med2/data/usuarios.json', 'r') as file:
+        pacientes=json.load(file)
+
+    #Extraer ruts para lista desplegable de cambio de usuario
+    rut_pacs=[]
+    for p in pacientes:
+        rut_pacs.append((p,p))
+
+    rut_pac= forms.ChoiceField(choices=(rut_pacs))

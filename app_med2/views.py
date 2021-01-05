@@ -2,7 +2,7 @@ from django.shortcuts import render
 import json
 
 #Forms
-from .forms_crear_usuario import CrearUsuario, Contacto
+from .forms import CrearUsuario, Contacto, rutPacientes
 
 def home(request):
 
@@ -47,10 +47,34 @@ def admin(request):
 
 def paciente(request):
 
-    #Vista usuario por defecto --> primero del listado
-    # Generar copia de los datos de usuarios
+    # ----------- Generar copia de los datos de pacientes y exámenes -----------
+    # Pacientes
     with open('../proyecto_web/app_med2/data/usuarios.json', 'r') as file:
         pacientes=json.load(file)
+    # Examenes
+    with open('../proyecto_web/app_med2/data/examenes.json', 'r') as file:
+        examenes=json.load(file)
+
+    # ----------- FUNCIÓN PARA CARGA DE DATOS DEL USUARIO SELECCIONADO -----------
+    def info_paciente(rut,pacientes):
+        '''
+        Función info_paciente: extrae los datos asociados al paciente para visualización en html
+        Parámetros:
+            * rut: rut del paciente --> asociado a datos del usuario
+            * pacientes: json de pacientes
+        '''
+        # Extracción de los datos del paciente
+        data_pac=pacientes[rut]
+        
+        #Datos paciente
+        rut=data_pac['rut']
+        nombre=data_pac['nombre']+" "+data_pac['apellido']
+        edad=data_pac['edad']
+        direccion=data_pac['direccion'] 
+        img_src=data_pac['foto_src']
+ 
+        return nombre, edad, direccion,img_src
+
 
     #Extraer ruts para lista desplegable de cambio de usuario
     rut_pacs=[]
@@ -60,21 +84,31 @@ def paciente(request):
 
     #Extraer primer rut
     f_pac=rut_pacs[0]
-    # Extracción datos del paciente
-    data_pac= pacientes[f_pac]
+    nombre_pac,edad_pac,direccion_pac,img_src =info_paciente(f_pac,pacientes)
 
     # --------------------- Datos de vista por defecto --------------------- 
-    #Datos paciente
-    rut_pac=data_pac['rut']
-    nombre_pac=data_pac['nombre']+" "+data_pac['apellido']
-    edad_pac=data_pac['edad']
-    direccion_pac=data_pac['direccion'] 
-    #Examenes
+
+    #Examenes por el rut 
+    diag_rut= examenes[f_pac]['diagnosticos']
+    hemo_rut=examenes[f_pac]['hemograma']
+    pbio_rut=examenes[f_pac]['perfil_bioquimico']
+    plip_rut=examenes[f_pac]['perfil_lipidico']
+    orin_rut=examenes[f_pac]['orina']
+    coag_rut=examenes[f_pac]['coagulacion']
+    glic_rut=examenes[f_pac]['glicemia']
+    elec_rut=examenes[f_pac]['electrocardiograma']
+    
+
     #Gráficos
     #Formulario Exámenes
 
+    # --------------------- Vista del usuario --------------------- 
+
+    form_rut = rutPacientes(request.POST or None)
 
 
     #Datos a entregar al html
-    context_pac={'nombre_us':nombre_pac,'edad_us':edad_pac, 'direccion_us':direccion_pac,'rut_pacs':rut_pacs}
+    context_pac={'nombre_us':nombre_pac,'edad_us':edad_pac, 'direccion_us':direccion_pac,'rut_pacs':rut_pacs,
+    'form_rut':form_rut,'img_src':img_src,'diag_rut':diag_rut,'hemo_rut':hemo_rut,'pbio_rut':pbio_rut,
+    'plip_rut':plip_rut,'orin_rut':orin_rut,'coag_rut':coag_rut,'glic_rut':glic_rut,'elec_rut':elec_rut}
     return render(request,'paciente.html',context_pac)
