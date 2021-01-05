@@ -1,8 +1,11 @@
 from django.shortcuts import render
 import json
+import matplotlib.pyplot as plt
+import pandas as pd 
+from pandas.io.json import json_normalize #package for flattening json in pandas df
 
 #Forms
-from .forms import CrearUsuario, Contacto, rutPacientes
+from .forms import CrearUsuario, Contacto, rutPacientes,Hemograma
 
 def home(request):
 
@@ -99,8 +102,23 @@ def paciente(request):
     elec_rut=examenes[f_pac]['electrocardiograma']
     
 
-    #Gráficos
+    # ----------------------------- Gráficos -----------------------------
+    
+    #funciones
+
     #Formulario Exámenes
+    form_hemo = Hemograma(request.POST or None)
+        
+    if form_hemo.is_valid():
+        from_data = form_hemo.cleaned_data
+        check_rut = from_data['rut']
+            
+        for examen in examenes:
+            if examen == check_rut:
+                examenes[check_rut]['hemograma'].append(from_data)
+                with open(str(settings.BASE_DIR)+ruta_examenes, 'w') as file:
+                    json.dump(examenes, file)            
+        return redirect('formularios:formularioOK')
 
     # --------------------- Vista del usuario --------------------- 
 
@@ -110,5 +128,5 @@ def paciente(request):
     #Datos a entregar al html
     context_pac={'nombre_us':nombre_pac,'edad_us':edad_pac, 'direccion_us':direccion_pac,'rut_pacs':rut_pacs,
     'form_rut':form_rut,'img_src':img_src,'diag_rut':diag_rut,'hemo_rut':hemo_rut,'pbio_rut':pbio_rut,
-    'plip_rut':plip_rut,'orin_rut':orin_rut,'coag_rut':coag_rut,'glic_rut':glic_rut,'elec_rut':elec_rut}
+    'plip_rut':plip_rut,'orin_rut':orin_rut,'coag_rut':coag_rut,'glic_rut':glic_rut,'elec_rut':elec_rut,'form_hemo': form_hemo}
     return render(request,'paciente.html',context_pac)

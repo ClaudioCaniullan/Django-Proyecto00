@@ -148,6 +148,7 @@
                         <li>Nombre: {{nombre_us}}</li>
                         <li>Edad: {{edad_us}}</li>
                         <li>Dirección: {{direccion_us}}</li>
+                        <li>Diagnósticos {{diag_rut}}</li>
                     </ul>
                 </div>
 
@@ -218,6 +219,15 @@
                         </tr>
                     {% endfor %}
                     </table>
+                </div>
+                <div class="row">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <table>
+                            {{form_hemo.as_table}}
+                        </table>
+                        <input type="submit" value="Agregar">
+                    </form>
                 </div>
             </div>
 
